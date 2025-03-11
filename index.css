@@ -83,9 +83,15 @@ section.language-chips {
 }
 
 span.chip {
+    display: inline-flex; /* Allows pseudo-elements to be visible */
+    align-items: center;
+    justify-content: center;
     border-radius: 3px;
     padding: 4.5px;
     position: relative;
+    min-width: 50px; /* Ensure enough space */
+    min-height: 25px;
+    text-align: center;
 }
 
 /* Dimmed overlay with skull on "lost" languages */
@@ -97,9 +103,8 @@ span.chip.lost::before {
     justify-content: center;
     height: 100%;
     width: 100%;
-    font-size: 0.85rem;
-    top: 0;
-    left: 0;
+    font-size: 1rem;
+    color: white;
     background-color: rgba(0, 0, 0, 0.7);
 }
 
